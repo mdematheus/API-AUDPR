@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scan Products</title>
+</head>
+<body>
+    <h2>Upload Excel File</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+    <h2>Verify Product Section</h2>
+    <form method="post" action="{{ url_for('verify') }}">
+        <label for="barcode">Barcode:</label>
+        <input type="text" name="barcode" required>
+        <label for="section">Section:</label>
+        <input type="text" name="section" required>
+        <button type="submit">Verify</button>
+    </form>
+</body>
+</html>
